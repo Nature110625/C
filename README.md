@@ -1,2 +1,2 @@
 # C
-Question I solved while learning C programming.
+Questions I solved while learning C programming.
