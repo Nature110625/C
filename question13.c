@@ -1,20 +1,15 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(){
-    int i=1, j, k, val=1;
-    while(i<=4){
-        j=1;
-        while(j<=4-i){
-            printf(".");
-            j++;
-        }
-        k=1;
-        while(k<=i){
-            printf("%d ", val);
-            val++;
-            k++;
-        }
+    int val=1;
+    for(int i=1; i<=4; i++) {
         printf("\n");
-        i++;
+        for(int j=1; j<=4-i; j++)
+            printf(" ");
+        for(int k=1; k<=i; k++, val++)
+            printf(" %d ", val);
     }
+    getch();
+    return 0;
 }
