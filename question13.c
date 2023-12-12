@@ -10,6 +10,6 @@ int main(){
         for(int k=1; k<=i; k++, val++)
             printf(" %d ", val);
     }
-    getch();
+    getch();    //this end program after clicking enter
     return 0;
 }
