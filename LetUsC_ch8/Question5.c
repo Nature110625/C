@@ -13,7 +13,6 @@ void pfac(int x){
         if(x%i==0){
             x=x/i;
             printf("%d ", i);
-            continue;
         }
         else
             i++;
