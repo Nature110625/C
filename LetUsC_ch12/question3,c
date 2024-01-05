@@ -1,3 +1,0 @@
-#include <stdio.h>
-#define AM (n1+n2)/2
-#define AV ()
