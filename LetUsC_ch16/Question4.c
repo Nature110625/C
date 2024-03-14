@@ -1,3 +1,11 @@
+/* this code is answer of two question
+Question1: Develop a program that receives the month and year from the
+keyboard as integers and prints the calendar in the following
+format...
+Question2: Modify the above program suitably so that once the calendar for a
+particular month and year has been displayed on the screen, then
+using arrow keys the user must be able to change the calendar in
+the following manner...*/
 #include<stdio.h>
 #include<windows.h>
 #include<conio.h>
