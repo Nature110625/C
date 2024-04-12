@@ -7,6 +7,7 @@ particular year.
 number is received by the function.*/
 
 #include <stdio.h>
+#include <conio.h>
 struct data {
         int roll_number;
         char name[50];
@@ -22,8 +23,9 @@ int main(){
     int year, roll, no_std;
     char ans;
     for(int i=0; i<450; i++){
-        printf("enter student %d roll number, name, department and course (in order): ", i+1);
+        printf("enter student %d roll number, name, department, course and year of joining (in order): ", i+1);
         scanf("%d%s%s%s%d", &students[i].roll_number, &students[i].name, &students[i].department, &students[i].course, &students[i].yoj);
+        fflush(stdin);
         printf("do you want to enter data (y/n): ");
         scanf("%c", &ans);
         if(ans=='n'){
@@ -51,6 +53,6 @@ void prints_name(int year, struct data *std, int n){
 void prints_data(int roll, struct data *std, int n){
     for(int i=0; i<=n; i++){
         if(std[i].roll_number==roll)
-            printf("%d%s%s%s%d\n", std[i].roll_number, std[i].name, std[i].department, std[i].course, std[i].yoj);
+            printf("roll number: %d \nName: %s \nDepartment: %s \nCourse: %s \nYear of joining: %d\n", std[i].roll_number, std[i].name, std[i].department, std[i].course, std[i].yoj);
     }
 }
