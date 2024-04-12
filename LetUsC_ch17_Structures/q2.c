@@ -11,46 +11,62 @@ for the specified withdrawal”, if on withdrawal the balance falls
 below Rs. 100.*/
 
 #include <stdio.h>
+#include <conio.h>
 struct data{
     int acc_no;
     char name[50];
     int balance;
-};
-void pless_bal(struct data *, int );
-int main(){
-    struct data coust[200];
-    int no_coust;
-    char ans;
-    printf("Enter the data: Account number, Name and Balance (in order) \n");
-    for(int i=0; i<200; i++){
-        printf("coustomer %d: ", i+1);
-        scanf("%d%s%d", &coust[i].acc_no, &coust[i].name, &coust[i].balance);
-        fflush(stdin);
-        printf("If you dont want to enter more data type 'n' else 'y': ");
-        scanf("%c", &ans);
-        if(ans=='n'){
-            no_coust=i;
-            break;
-        }
-    }
-    printf("\n\nCoustomer with balance below Rs.100");
-    pless_bal(coust, no_coust);
+} cstmr[200];
 
-    int code, acc, amt;
-    printf("To request withdrawal or deposit enter 'y': ");
+void prnt_lbal(int size);
+int chbal(int i);
+int iof_ano(int ano, int s);
+
+int main(){
+    int i, anum, amt, code, j;
+    char ans;
+    printf("Enter details (Account number, Name and Balance) of Customer (Enter 'no' to stop entering): \n");
+    for (i=0; ;i++){
+        printf(">");
+        if(!scanf("%d%s%d", &cstmr[i].acc_no, &cstmr[i].name, &cstmr[i].balance))
+            break;
+    }
+    prnt_lbal(i);
+    fflush(stdin);
+    printf("\n\nDo you want to request for withdrawl or deposit?\nEnter 'y' or 'n': ");
     scanf("%c", &ans);
-    if(ans=='y'){
-        printf("Enter 0 to withdraw and 1 to deposit: ");
+    if(ans=='y'|| ans=='Y'){
+        printf("\n\n-------------FORM------------");
+        printf("\nEnter Account number: ");
+        scanf("%d", &anum);
+        printf("Enter amount: ");
+        scanf("%d", &amt);
+        printf("Enter code (1 for deposit and 0 for withdrawl): ");
         scanf("%d", &code);
-        printf("Enter account number and amount to withdraw or deposit: ");
-        scanf("%d%d", &acc, &amt);
-        if()
+        j=iof_ano(anum, i);
+        if(code==0 && chbal(j))
+            printf("\nThe balance is insufficient for the specified withdrawal");
     }
 }
 
-void pless_bal(struct data *cstr, int n){
-    for (int i=0; i<=n; i++){
-        if(cstr[i].balance<100)
-            printf("\nAccount number: %d\nName: %s", cstr[i].acc_no, cstr[i].name);
+int chbal(int i){
+    if(cstmr[i].balance<100){
+        return 1;
+    }
+    return 0;
+}
+
+void prnt_lbal(int size){
+    printf("\nlist of customer having balance less than 100.");
+    for(int i=0; i<size; i++)
+        if(chbal(i))
+            printf("\n\tAccount Number: %d\tName: %s", cstmr[i].acc_no, cstmr[i].name);
+}
+
+int iof_ano(int ano, int s){
+    for (int i=0; i<s; i++){
+        if(cstmr[i].acc_no==ano){
+            return i;
+        }
     }
 }
