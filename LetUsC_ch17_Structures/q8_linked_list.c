@@ -54,47 +54,50 @@ int main(){
             scanf("%d", &head->data);
             head->link=k;   //the address stored in k got stored in new first element's pointer to next element
             break;
-        case 2: 
-            printf("\nEnter the value(i.e. integer) you want to add in ending: ");
+        case 2: //adds new node in ending
+            printf("\nEnter the value(i.e. integer) you want to add in ending: ");      
             l=head;
+            //this loop runs to get last node of linked list and after finding adds new node making it second last node
             for(int i=0; ;i++){  
                 if(l->link==NULL){
-                    l->link=(struct linked *)malloc(1); 
-                    scanf("%d", &l->link->data);
+                    l->link=(struct linked *)malloc(1); //added new node
+                    scanf("%d", &l->link->data);    //takes entry from user
                     l->link->link=NULL;
                     break; 
                 }
                 l=l->link;
             }
             break;
-        case 3: 
+        case 3: //adds new element in the middle
             printf("\nThese are the value of element present in the linked list\n");
-            display(head);
+            display(head);  //display all value 
             int eval;
+        
             printf("\nEnter the value after which you want to add a new element: ");
-            scanf("%d", &eval);
+            scanf("%d", &eval);     //
             l=head;
-            for(int i=0; ;i++){
+            for(int i=0; ;i++){     //finds value entered by user in linked list adds new node after that value
                 if(l->data==eval){
                     k=l->link;
-                    l->link=(struct linked *)malloc(1);
+                    l->link=(struct linked *)malloc(1);     //creates new node and add in the middle
                     printf("\nEnter the value(i.e. integer) of new element: ");
-                    scanf("%d", &l->link->data);
+                    scanf("%d", &l->link->data);        //take new node value from user
                     l->link->link=k;
                 }   
                 l=l->link;
-                if(l==NULL) 
+                if(l==NULL) //if the entered value not found do nothing
                     break; 
             }
             break;
-        case 4:
+        case 4:     //Displays the linked list
             printf("\nThese are the value of element present in the linked list\n");
             display(head);
             break;
         default:
             printf("Invalid entry");
     }
-    display(head);
+
+    //prompts again
     printf("\n\nEnter the number preceeding the option to perform that task: ");
     }
 }
