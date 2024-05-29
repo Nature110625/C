@@ -7,6 +7,10 @@
 * device driver programs are exclusively written in C.
 * Program having constraints on time and space are written in C.
 * c provides several language elements to make hardware interaction feasible without compromising performance.
+* C has 45 operators available, but no operator for exponentiation. 
+* After writing C program we need to type it and instruct the machine to execute it.
+* In **Editor** we type, then **Compiler** convert it to machine language instruction before machine can execute it.
+* **IDE: INTEGRATED DEVELOPMENT ENVIRONMENT** consists of an Editor as well as the Compiler.
 
 ### CONSTANTS
 * an entity that does not change. 
@@ -54,6 +58,7 @@
     * It is any combination of 1 to 31 alphabets, digits or underscores.
     * first character must be an alphabet or underscore(_).
 * It is compulsory to declare the **type** of variable while naming it.
+* variable used in a program must be declared before using it.
 
 ### Keyword**
 * are words whose meaning has already been explained to the C compiler (or in broad sense to the computer).
@@ -74,3 +79,20 @@
 * Comment cannot be nested.
 * Comment can be split over more than one line.
 * // : double slash can be used to write single line comment.
+
+### FUNCTION
+* container for a set of statements enclosed in braces and returns value.
+* A program can have multiple functions. 
+* `printf()` is a ready made function.
+    * displays characters on screen.
+    * to use `printf()` we have to include 'stdio.h'
+    ```#include <stdio.h>```
+    * `#include` is a preprocessor
+    * in general `printf()` function is
+    ```printf("<format string>", <list of variables>)```
+    * `\n` called newline, takes cursor to next line. It is one of the Escape Sequences available in C.
+    * can also print result of an expression.
+* `scanf()` is counter-part of the `printf()`.
+    * receives input from the keyboard.
+    * `&`(ampersand): Address of operator gives location number(address) used by the variable in memory.
+    * value supplied to `scanf()` must be separated by a blank, a tab or a new line.
