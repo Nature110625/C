@@ -18,10 +18,29 @@
 * An arithmetic operation between integer and integer, real and real, and integer and real yields integer, real and real result respectively.
 * 
 ## Control instruction
-* This is used to control the sequence of execution of various statements in a C program.
+* This is used to control the sequence of execution of various statements in a C program. 
+* There are four types of control instructions in C
+    * Sequence Control Instruction: ensures that the instruction are executed in the same order in which they appear in the program.
+    * Selection or Decision Control Instruction
+    * Repetition or Loop Control Instruction
+    * Case Control Instruction
 
 ## Type conversion in Assignment
-* When the type of the expression on right-hand side and on the left-hand side of an assignment operator is not same, then the value of expression on the right-hand side is either promoted or demoted depending on the type of expression on the left-hand side.
+* When the type of the expression on right-hand side and on the left-hand side of an assignment operator is not same, then the value of expression on the right-hand side is either promoted or demoted depending on the type of expression on the left-hand side of =.
+
+## Hierarchy of Operations
+* The priority or precedence in which the operations in an arithmetic statement are performed is called the hierarchy of operations.
+*   |prority|operators|description|
+    |-------|---------|-----------|
+    |1<sup>st</sup>|*, /, % | Multiplication, Division, Modular division|
+    |2<sup>nd</sup>| +, - | Addition, Substraction|
+    |3<sup>rd</sup>| = | Assignment|
+
+## Associativity of Operators
+* Used to settle tie between two operators of equal priority.
+* there are two type of associativity
+    * Left to Right: *, /
+    * Right to Left: =
 ## NOTE
 * Modulo Operator `%`
     * This operator returns the remainder on dividing one integer with another
@@ -34,4 +53,4 @@
 * Exponentiation is carried out by using `pow()` function. 
 * For `pow()` function to work correctly we have to add a preprocessor directive `#include <math.h>`.
 * pow(a, b) => a<sup>b</sup>
-* 
+* There are 45 odd operators on C

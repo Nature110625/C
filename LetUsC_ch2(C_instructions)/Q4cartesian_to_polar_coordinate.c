@@ -1,3 +1,5 @@
+/*Write a program to receive Cartesian co-ordinates (x, y) of a point
+and convert them into polar co-ordinates (r, 0)*/
 #include <stdio.h>
 #include <math.h>
 

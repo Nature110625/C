@@ -1,3 +1,5 @@
+/*If a five-digit number is input through the keyboard, write a 
+program to reverse the number.*/
 #include <stdio.h>
 int main() {
     int val, dg, num=0;

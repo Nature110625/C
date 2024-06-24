@@ -1,11 +1,17 @@
+/*Consider a currency system in which there are notes of seven
+denominations, namely, Rs. 1, Rs. 2, Rs. 5, Rs. 10, Rs. 50, Rs. 100. If
+a sum of Rs. N is entered through the keyboard, write a program to
+compute the smallest number of notes that will combine to give Rs. N.*/
 #include <stdio.h>
 
 int main() {
     int tmny, n_hndrd, n_fft, n_tn, n_fiv, n_two, n_one, t_no;
     printf("Enter the amount: ");
     scanf("%d", &tmny);
+    //first, did float division to get no.of 100 present. since it is largest entity and hence will reduce no. of notes
     n_hndrd=tmny/100;
     tmny=tmny-n_hndrd*100;
+    //after removing all hundred's , did float division to get no. of 50 present and so on...
     n_fft=tmny/50;
     tmny=tmny-n_fft*50;
     n_tn=tmny/10;
