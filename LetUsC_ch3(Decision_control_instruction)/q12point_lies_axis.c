@@ -1,3 +1,5 @@
+/*Given a point (x, y), write aprogram to find out if it lies on the X-
+axis, Y-axis or on the origin*/
 #include <stdio.h>
 
 int main(){

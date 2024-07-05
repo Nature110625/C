@@ -1,3 +1,5 @@
+/*Given three points (x1, y1), (x2, y2) and (x3, y3), write a program
+to check if all the three points fall on one straight line.*/
 #include <stdio.h>
 #include <math.h>
 int main() {
@@ -13,6 +15,15 @@ int main() {
     AC=sqrt((Ax-Cx)*(Ax-Cx)+(Ay-Cy)*(Ay-Cy));
     if (AB+BC==AC)
         printf("The points are in a straight line.");
-    else
-        printf("The points are not in a straight line.");
+    else{
+        if (AC+BC==AB)
+            printf("The points are in a straight line.");
+        else{
+            if (AB+AC==BC)
+                printf("The points are in a straight line.");
+            else
+                printf("The points are not in a straight line.");
+        }
+    
+    }
 }
