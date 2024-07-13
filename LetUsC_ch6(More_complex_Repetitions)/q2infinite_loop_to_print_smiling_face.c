@@ -4,7 +4,7 @@ smiling face has an ASCII value 1*/
 
 int main() {
     char val=1;
-    for(;;)
+    for(;;) //This loop will run till the memory gets full
         printf("%c", val);
     return 0;
 }
