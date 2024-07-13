@@ -6,7 +6,9 @@ last decade.*/
 
 int main(){
     float p=100000;
-    for (int i=1; i<=10; i++){
+    int year=2024;
+    for (int i=1; i<=10; i++, year--){
+        printf("population in year %d is = ", year);
         printf("%f\n",p);
         p-=p*0.1;
     }
