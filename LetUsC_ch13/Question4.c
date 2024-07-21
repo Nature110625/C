@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX 5
+#define MAX 25
 void insertion_sort(int *);
 void swap(int *, int *);
 int main(){
