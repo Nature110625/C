@@ -5,7 +5,7 @@ int main(){
     FILE *fp;
     char ch;
     int noc=0, nos=0, not=0, nol=0; //number of character, spaces, tabs and lines respectively
-    fp=fopen("test.c", "r");
+    fp=fopen("testSubjects/test.c", "r");
     if (fp==NULL){
         puts("Cannot open file");
         exit(1);

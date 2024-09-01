@@ -107,6 +107,25 @@ f. Closing a file
             * if file doesn't exists -> a new file is created.
             * if unable to open file -> returns null
         * **Operation possible** - reading existing contents, appending new contents to end of file, cannot modify existing contents.
+## String (line) I/O Files
+* String input is done using function `fputs()`.
+* `fputs()` don't add newline character to the end of string, we must do this explicitly to make it easier to read the string back from the file.
+* On reading a line from the file, the string array would contain '\n' followed by a '\0'.
+* When all the lines from the file have been read, we attempt to read one more line in which case `fgets()` returns `NUll`.
+* **The Awkward Newline**
+    * `fputs()` converts the `\n` to `\r\n` combination, where one is carriage return and other is for linefeed.
+    * `fgets()` and `fgetc()` do reverse conversion.
+    * thus when we enter line "Shining and bright" and click enter
+    *   ```
+        Shinning and bright\r\n
+        ```
+        This gets written to the file using `fputs()`
+    *   And when the same line is read back into the array `s[]` using `fgets()` the array contains
+        ```
+        Shinning and bright\n\0
+        ```
+## Record input/output in files
+* `fprintf()` writes the values in the structure variable to the file.
 
 ## Note
 * `fopen("PR1.C", "r");`: will open a file "PR1.C" in **read** mode
@@ -122,3 +141,11 @@ f. Closing a file
     * In Visual Stdio `exit()` value is shown in the Output Window at the bottom
     * In Turbo C++ this value can be seen through the compile | information menu item.
     * The prototype of `exit()` function is declared in the header file **stdlib.h**.
+* `fputs(<array>, <FILE pointer> )`: writes xontent of the array to the disk
+* `fgets()`
+    * takes three arguments
+        1. address where string will be stored
+        2. maximum length of the string (Prevents from reading in too long string and overflowing the array)
+        3. pointer to the structure FILE
+    * terminate the string with null character.
+* `fprintf()` is simillar to `printf()` except that the `FILE` pointer is included as the first argument.
