@@ -53,14 +53,14 @@
 ### VARIABLES
 * an entity that may change.
 * In programming languages, often called **identifiers**.
-* computer's memory consists of million of cells, known as memory cells (also called **memory locations**). These memory locations sores results of calculations. To make the retrieval and usage of value stored easy these memory locations are given names (called **variable names**).
+* computer's memory consists of million of cells, known as memory cells (also called **memory locations**). These memory locations stores results of calculations. To make the retrieval and usage of value stored easy these memory locations are given names (called **variable names**).
 * **Rules for constructing variable names**
     * It is any combination of 1 to 31 alphabets, digits or underscores.
     * first character must be an alphabet or underscore(_).
 * It is compulsory to declare the **type** of variable while naming it.
 * variable used in a program must be declared before using it.
 
-### Keyword**
+### Keyword
 * are words whose meaning has already been explained to the C compiler (or in broad sense to the computer).
 * 32 keywords are available in C.
 * ANSI committee have suggested that every compiler specific keyword should be preceded by two underscores.
